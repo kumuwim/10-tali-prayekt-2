@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Product
+from .models import Student
 
-class ProductSerializers(ModelSerializer):
+class StudentSerializers(ModelSerializer):
     class Meta:
-        model=Product
-        fields = ["id", "name", "created_at", "price", "descriptions"]
-        read_only_fields=["id"]
+        model=Student
+        fields = ["id", "name", "sur_name", "age", "descriptions"]
+        read_only_fields=["id","created_at"]

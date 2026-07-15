@@ -3,15 +3,15 @@ from django.db import models
 
 # Create your models here.
 
-class Product(models.Model):
+class Student(models.Model):
     name=models.CharField(max_length=100,blank=False,null=False)
-    price=models.PositiveIntegerField(blank=False,default=0)
-    descriptions=models.TextField()
+    sur_name=models.CharField(blank=False,max_length=100,null=False)
     created_at=models.TimeField(auto_now_add=True)
-    created_date=models.DateField(auto_now_add=True)
-    update_at=models.TimeField(auto_now=True)
+    sur_name=models.CharField(max_length=100,blank=False,null=False)
+    age=models.PositiveIntegerField(default=0,blank=False)
 
 
-def __str__(self):
-    return self.name    
+
+    def __str__(self):
+        return self.name   
     
